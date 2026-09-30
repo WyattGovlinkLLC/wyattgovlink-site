@@ -135,19 +135,16 @@
     <section class="contact" id="contact">
       <div class="wrap contact-grid">
         <div class="contact-copy"><p class="eyebrow">Contact</p><h2>Tell us what you need.</h2><p>Have an agency requirement, or interested in working with us as a vendor, subcontractor, or partner? Send the details and we’ll respond within 48 hours.</p><div class="direct"><span><strong>Email</strong><br><a href="mailto:info@wyattgovlink.com">info@wyattgovlink.com</a></span><span><strong>Phone</strong><br><a href="tel:+12523502288">(252) 350-2288</a></span><span><strong>Address</strong><br>2924 Mulberry Ln, Unit C<br>Greenville, NC 27858-5898</span></div></div>
-        <form id="inquiryForm" action="https://formsubmit.co/info@wyattgovlink.com" method="POST">
+        <form id="inquiryForm" action="https://formspree.io/f/xkjgezen" method="POST">
           <input type="hidden" name="_subject" id="fsSubject" value="New website inquiry — Wyatt Govlink" />
-          <input type="hidden" name="_template" value="table" />
-          <input type="hidden" name="_captcha" value="false" />
-          <input type="hidden" name="_next" id="fsNext" value="https://wyattgovlinkllc.github.io/wyattgovlink-site/?thanks=1#contact" />
-          <input type="hidden" name="_autoresponse" value="Thank you for contacting Wyatt GovLink LLC. We have received your inquiry and will get back to you within 48 hours. — Tyrence Pettaway, Wyatt GovLink LLC · (252) 350-2288 · info@wyattgovlink.com" />
-          <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
+                              <input type="hidden" name="_next" id="fsNext" value="https://wyattgovlinkllc.github.io/wyattgovlink-site/?thanks=1#contact" />
+                    <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
           <div class="row"><div class="field"><label for="name">Full name *</label><input id="name" name="name" autocomplete="name" required /></div><div class="field"><label for="company">Company / organization</label><input id="company" name="company" autocomplete="organization" /></div></div>
           <div class="row"><div class="field"><label for="email">Email *</label><input id="email" name="email" type="email" autocomplete="email" required /></div><div class="field"><label for="phone">Phone</label><input id="phone" name="phone" type="tel" autocomplete="tel" /></div></div>
           <div class="field"><label for="category">I am a *</label><select id="category" name="category" required><option value="">Select one</option><option>Government buyer</option><option>Vendor / supplier</option><option>Subcontractor</option><option>Other</option></select></div>
           <div class="field"><label for="message">Message *</label><textarea id="message" name="message" required></textarea></div>
           <button class="button" type="submit">Send inquiry</button>
-          <p class="form-note">Sends directly to us — no email app needed. You’ll get a confirmation right away, and a response within 48 hours.</p>
+          <p class="form-note">Sends directly to us — no email app needed. We’ll respond within 48 hours.</p>
           <div class="status" id="formStatus" role="status" aria-live="polite"></div>
         </form>
       </div>
@@ -168,7 +165,7 @@
       });
       var params = new URLSearchParams(window.location.search);
       if (params.get('thanks') === '1' && status) {
-        status.textContent = 'Thank you — your inquiry was sent. A confirmation is on its way to your email, and we will respond within 48 hours.';
+        status.textContent = 'Thank you — your inquiry was sent. We will respond within 48 hours.';
         document.getElementById('contact').scrollIntoView();
       }
     })();
